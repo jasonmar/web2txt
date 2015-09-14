@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Web2Txt</title>
+    <script src="/js/contentBox.js"></script>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/skeleton.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Web2Txt</h1>
+        <div class="row">
+            <div class="eight columns">
+                <form onsubmit="getContent();" >
+                    <input type="text" id="uri" class="u-full-width" value="Enter a URI" />
+                </form>
+            </div>
+            <div class="four columns">
+                <a class="button button-primary" href="#" onclick="getContent();">Get Plaintext</a>
+                <a class="button" href="#" onclick="setContent('');">Clear Window</a>
+            </div>
+        </div>
+        <div class="row" style="margin:10px;">
+            <pre>
+                <code id="contentBox">Content will appear here</code>
+            </pre>
+        </div>
+        <div class="row">
+            <h2>Instructions</h2>
+            <p>Add your link after /txt/ to view a plaintext version of most websites</p>
+            <p><a href="/txt/https://news.ycombinator.com">Try getting text from a website</a></p>
+            <p><a href="/txt/http://docs.cpuc.ca.gov/PublishedDocs/Efile/G000/M154/K296/154296177.PDF">Try getting text from a pdf</a></p>
+            <p>Add your link after /src/ to view a plaintext version of most websites</p>
+            <p><a href="/src/https://news.ycombinator.com/news?p=2">Try getting source from a website</a></p>
+        </div>
+        <div class="row">
+            <h2>Test links</h2>
+            <p>These features have been added to provide examples of using Spray routing directives</p>
+            <p><em>Show Headers:</em><a href="/headers">/headers</a></p>
+            <p><em>Show Cookies:</em><a href="/cookies">/cookies</a></p>
+            <p>The following example page provides an example of redirection with a cookie test.
+                Normally Spray doesn't follow redirects, so this gives an example of how Spray pipelining works.
+                Note that you can point the proxy here and to the headers page to see what the server will see and
+                verify that redirects are actually being followed.
+            </p>
+            <p><em>Cookie test:</em><a href="/set-cookie">/set-cookie</a></p>
+        </div>
+    </div>
+</body>
+</html>
